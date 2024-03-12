@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(basePath, "public")));
 app.use(cors());
-app.use("/home", homeRouter);
+app.use("/api/home", homeRouter);
 
 app.get("/test/:time", (req, res) => {
 	const { time = 30000 } = req.params;
